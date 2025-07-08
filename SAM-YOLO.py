@@ -1,4 +1,4 @@
-# YOLO + SAM 연동 자동 파이프라인 예제
+# YOLO + SAM 연동 모델
 
 import torch
 import cv2
@@ -8,10 +8,10 @@ from segment_anything import sam_model_registry, SamPredictor
 from ultralytics import YOLO
 
 # === 1. Load YOLOv8 모델 ===
-yolo_model = YOLO("yolov8n.pt")  # mineral 전용으로 fine-tuned된 모델이 있다면 그걸 쓰세요
+yolo_model = YOLO("yolov8n.pt")  # mineral 전용으로 fine-tuned된 모델 필요
 
 # === 2. Load SAM 모델 ===
-sam_checkpoint = "C:/Users/Admin/Downloads/sam_vit_h_4b8939.pth"
+sam_checkpoint = "C:/Users/Admin/Downloads/sam_vit_h_4b8939.pth"  # 기학습된 SAM 모델 불러오기
 model_type = "vit_h"
 sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
 sam.to("cuda")
@@ -29,15 +29,15 @@ bboxes = results[0].boxes.xyxy.cpu().numpy().astype(int)  # (x1, y1, x2, y2)
 # === 5. SAM에 이미지 등록 ===
 predictor.set_image(image_rgb)
 
-# === 6. 각 box에 대해 SAM 마스크 생성 ===
+# === 6. 각 bounding box에 대해 SAM에 box prompt를 전달하여 마스크 생성 ===
 final_mask = np.zeros(image.shape[:2], dtype=np.uint8)
-for box in bboxes:
+for box in bboxes:  # YOLO로 탐지된 bounding box를 SAM의 box 프롬프트로 사용
     masks, scores, _ = predictor.predict(
-        box=box,
-        multimask_output=False  # 가장 confident한 하나만
+        box=box,                # SAM에 box prompt로 전달
+        multimask_output=False # 가장 confidence 높은 하나의 마스크만 사용
     )
-    final_mask = np.logical_or(final_mask, masks[0])
-
+    final_mask = np.logical_or(final_mask, masks[0])  # 마스크 병합
+    
 # === 7. 마스크로 광물 추출 ===
 masked_img = cv2.bitwise_and(image_rgb, image_rgb, mask=final_mask.astype(np.uint8))
 

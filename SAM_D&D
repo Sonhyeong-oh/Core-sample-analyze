@@ -59,7 +59,7 @@ plt.title("Mask from Drag-and-Drop Box")
 plt.axis('off')
 plt.show()
 
-# 박스는 반드시 int로 캐스팅되어야 합니다
+# 박스는 반드시 int로 캐스팅
 input_box = np.array([[x, y, x + w, y + h]]).astype(int)
 
 # 마스크는 SAM의 output에서 가져온 것 (mask = masks[0])

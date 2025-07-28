@@ -29,3 +29,10 @@ YOLO의 객체 탐지가 불안정할 경우를 대비해 탐지할 영역을 �
 * SAM paper : https://arxiv.org/pdf/2304.02643
 * Visual Transformer paper : https://arxiv.org/pdf/2010.11929
 * YOLO paper : https://arxiv.org/abs/1506.02640
+
+# 3. HRNet+DLV3.py
+시추코어 이미지를 통한 밀도, 자기감수율, P파 속도 예측 모델
+
+* 개선 사항
+  - 파라미터 튜닝 코드 추가
+  - epoch를 100까지 늘려서 테스트

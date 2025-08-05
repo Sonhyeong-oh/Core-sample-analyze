@@ -26,11 +26,6 @@ To achieve this, YOLO is used to define bounding boxes for the target object, an
 A standalone SAM script for manually specifying regions when YOLO's object detection is unreliable.
 If a box is manually defined, SAM detects objects within that region.
 
-# References
-* SAM paper : https://arxiv.org/pdf/2304.02643
-* Visual Transformer paper : https://arxiv.org/pdf/2010.11929
-* YOLO paper : https://arxiv.org/abs/1506.02640
-
 # 3. HRNet+DLV3.py
 
 <img width="1727" height="683" alt="image" src="https://github.com/user-attachments/assets/6399024b-9afe-4c40-8506-c295c067cc9d" />
@@ -45,9 +40,9 @@ Extend training up to 100 epochs for testing
 
 Modify visualization method
 
-시추코어 이미지를 통한 밀도, 자기감수율, P파 속도 예측 모델
-
-* 개선 사항
-  - 파라미터 튜닝 코드 추가
-  - epoch를 100까지 늘려서 테스트
-  - 시각화 방식 변경
+# References
+* SAM : https://arxiv.org/pdf/2304.02643
+* Visual Transformer : https://arxiv.org/pdf/2010.11929
+* YOLO : https://arxiv.org/abs/1506.02640
+* HRNet : https://arxiv.org/abs/1908.07919
+* DeepLabV3+ : https://arxiv.org/abs/1802.02611

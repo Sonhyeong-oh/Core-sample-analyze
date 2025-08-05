@@ -28,7 +28,7 @@ If a box is manually defined, SAM detects objects within that region.
 
 # 3. HRNet+DLV3.py
 
-<img width="1727" height="683" alt="image" src="https://github.com/user-attachments/assets/6399024b-9afe-4c40-8506-c295c067cc9d" />
+<img width="1758" height="704" alt="image" src="https://github.com/user-attachments/assets/ce525b9a-758f-43d3-b26b-06e197277c3b" />
 
 A model that predicts density, magnetic susceptibility, and P-wave velocity from core sample images.
 

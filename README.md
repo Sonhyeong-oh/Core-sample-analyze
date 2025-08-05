@@ -1,5 +1,5 @@
 # Core-sample-analyze
-시추 코어 이미지 분석
+Core sample image analysis
 
 # 1. SAM-YOLO.py
    ![Figure_1](https://github.com/user-attachments/assets/098c056b-7e4e-4444-a26e-0f59639392ac)
@@ -7,14 +7,17 @@
 
 원본 이미지 속 시추 코어 추출을 위한 SAM-YOLO 결합 모델
 
-* SAM : Meta에서 개발한 Visual Transformer 기반 객체탐지 알고리즘
-* YOLO : CNN 기반 객체탐지 알고리즘
+A combined SAM-YOLO model for extracting core samples from original images.
 
-SAM에서 객체 추출을 하기 위해선 추출하고자 하는 객체의 중심점 또는 영역을 지정이 필요, 
+- SAM: A Visual Transformer-based object segmentation algorithm developed by Meta
 
-이를 위해 YOLO로 추출하고자 하는 객체에 사각형 경계를 설정한 후, 그 경계를 기준으로 객체를 추출하도록 구성
+- YOLO: A CNN-based object detection algorithm
 
-- 개선사항 : 광물만을 추출하기 위해선 YOLO의 광물 탐지능력이 중요, 광물 이미지 데이터를 확보하여 별도로 학습시킨 모델 구현이 필요
+In order to extract objects using SAM, it is necessary to specify the center point or region of the target object.
+
+To achieve this, YOLO is used to define bounding boxes for the target object, and then SAM extracts the object based on that region.
+
+- Improvements: For extracting only minerals, the mineral detection capability of YOLO is crucial. It is necessary to train a custom model using a dedicated mineral image dataset.
 
 # 2. SAM_D&D.py
 
@@ -22,15 +25,28 @@ SAM에서 객체 추출을 하기 위해선 추출하고자 하는 객체의 중
 ![Figure_3](https://github.com/user-attachments/assets/893749ea-17e6-40ee-bd5d-42b1a58350d1)
 ![Figure_4](https://github.com/user-attachments/assets/f701825d-3a12-4359-8033-feeabdaa2f7c)
 
-YOLO의 객체 탐지가 불안정할 경우를 대비해 탐지할 영역을 수동 지정하는 SAM 단일 코드
-수동으로 박스를 지정하면 SAM이 그 영역의 객체를 탐지
+A standalone SAM script for manually specifying regions when YOLO's object detection is unreliable.
+If a box is manually defined, SAM detects objects within that region.
 
-# 참고문헌
+# References
 * SAM paper : https://arxiv.org/pdf/2304.02643
 * Visual Transformer paper : https://arxiv.org/pdf/2010.11929
 * YOLO paper : https://arxiv.org/abs/1506.02640
 
 # 3. HRNet+DLV3.py
+
+<img width="1727" height="683" alt="image" src="https://github.com/user-attachments/assets/6399024b-9afe-4c40-8506-c295c067cc9d" />
+
+A model that predicts density, magnetic susceptibility, and P-wave velocity from core sample images.
+
+- Improvements
+
+Add hyperparameter tuning code
+
+Extend training up to 100 epochs for testing
+
+Modify visualization method
+
 시추코어 이미지를 통한 밀도, 자기감수율, P파 속도 예측 모델
 
 * 개선 사항

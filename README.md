@@ -40,6 +40,14 @@ Extend training up to 100 epochs for testing
 
 Modify visualization method
 
+# 4. SLIC+SAM.py
+
+<img width="796" height="740" alt="05" src="https://github.com/user-attachments/assets/fc1602a9-eac0-4834-be8c-c532bcb8247b" />
+
+Image Segmentation Using SLIC(Simple Linear Iterative Clustering) and SAM(Segment Anything Model)
+
+SLIC (Simple Linear Iterative Clustering) generates initial superpixels based on the image's color and location. The center points of these generated superpixels are then used as prompts for SAM (Segment Anything Model) to create more detailed and precise final segmentation masks.
+
 # References
 * SAM : https://arxiv.org/pdf/2304.02643
 * Visual Transformer : https://arxiv.org/pdf/2010.11929

@@ -40,13 +40,24 @@ Extend training up to 100 epochs for testing
 
 Modify visualization method
 
-# 4. SLIC+SAM.py
+# 4. SLIC_SAM.py
 
 <img width="796" height="740" alt="05" src="https://github.com/user-attachments/assets/fc1602a9-eac0-4834-be8c-c532bcb8247b" />
 
 Image Segmentation Using SLIC(Simple Linear Iterative Clustering) and SAM(Segment Anything Model)
 
 SLIC (Simple Linear Iterative Clustering) generates initial superpixels based on the image's color and location. The center points of these generated superpixels are then used as prompts for SAM (Segment Anything Model) to create more detailed and precise final segmentation masks.
+
+# 5. composition_pred.py
+
+<img width="941" height="785" alt="2019_643_fa_jpc40_01_left50_cropped_viz" src="https://github.com/user-attachments/assets/8ad05233-36ae-4cbc-8e64-2bc7ce1af86b" />
+
+SLIC (Superpixel Linear Iterative Clustering) is a variation of K-means clustering that operates in a color and spatial domain. 
+It searches only the local neighborhood of each cluster center to group pixels with high color and spatial similarity. 
+
+The areas identified by SLIC as potential different minerals are then fed into the Segment Anything Model (SAM) algorithm. Using a Vision Transformer, SAM outputs multiple candidate segmentation results. The most confident segmentation result is then selected from these candidates, which is designed to improve the precision of the area segmentation. 
+
+Finally, the extracted areas, predicted physical property values, and physical property variation patterns of each component are used as inputs for Non-Negative Least Squares (NNLS) regression to calculate the compositional percentage for each area.
 
 # References
 * SAM : https://arxiv.org/pdf/2304.02643

@@ -59,6 +59,9 @@ The areas identified by SLIC as potential different minerals are then fed into t
 
 Finally, the extracted areas, predicted physical property values, and physical property variation patterns of each component are used as inputs for Non-Negative Least Squares (NNLS) regression to calculate the compositional percentage for each area.
 
+# Paper
+게재 예정정
+
 # References
 * SAM : https://arxiv.org/pdf/2304.02643
 * Visual Transformer : https://arxiv.org/pdf/2010.11929

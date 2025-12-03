@@ -56,14 +56,9 @@ Modify visualization method
   </thead>
   <tbody>
     <tr>
-      <td>ResNet18</td>
+      <td>ResNet18-Regression</td>
       <td>129,448.11</td>
       <td>0.0231</td>
-    </tr>
-    <tr>
-      <td>Regression</td>
-      <td>–</td>
-      <td>–</td>
     </tr>
     <tr>
       <td>HRNet + DeepLabV3+</td>

@@ -42,6 +42,37 @@ Extend training up to 100 epochs for testing
 
 Modify visualization method
 
+- Material property prediction results
+
+  <img width="317" height="116" alt="image" src="https://github.com/user-attachments/assets/99286742-da7b-4f94-8242-44e1d68c6229" />
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>MSE</th>
+      <th>R²</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ResNet18</td>
+      <td>129,448.11</td>
+      <td>0.0231</td>
+    </tr>
+    <tr>
+      <td>Regression</td>
+      <td>–</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>HRNet + DeepLabV3+</td>
+      <td>0.7159</td>
+      <td>0.6663</td>
+    </tr>
+  </tbody>
+</table>
+
 # 4. SLIC_SAM.py
 
 <img width="796" height="740" alt="05" src="https://github.com/user-attachments/assets/fc1602a9-eac0-4834-be8c-c532bcb8247b" />

@@ -44,7 +44,7 @@ Modify visualization method
 
 - Material property prediction results
 
-<img width="637" height="232" alt="image" src="https://github.com/user-attachments/assets/0c595dc5-eb0f-43b9-b451-1dfce3838235" />
+<img width="2006" height="729" alt="image" src="https://github.com/user-attachments/assets/546f5d39-a941-473b-bf4a-a283b42b4a0f" />
 
 <table>
   <thead>

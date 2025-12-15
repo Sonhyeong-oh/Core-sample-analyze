@@ -88,7 +88,8 @@ The areas identified by SLIC as potential different minerals are then fed into t
 Finally, the extracted areas, predicted physical property values, and physical property variation patterns of each component are used as inputs for Non-Negative Least Squares (NNLS) regression to calculate the compositional percentage for each area.
 
 # Paper
-게재 예정
+정지성 et al., "시추코어 색상 기반 광물 분포 예측", ACK2025 32권 2호
+[게재 예정](https://share.google/ojmb1UbWpkOs5DO61)
 
 # References
 * SAM : https://arxiv.org/pdf/2304.02643

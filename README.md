@@ -90,7 +90,7 @@ Finally, the extracted areas, predicted physical property values, and physical p
 # Paper
 정지성 et al., "시추코어 색상 기반 광물 분포 예측", ACK2025 32권 2호
 
-https://www.manuscriptlink.com/society/kips/conference/ack2025/file/downloadSoConfManuscript/abs/KIPS_C2025B0028F
+https://kiss.kstudy.com/Detail/Ar?key=4209865
 
 # References
 * SAM : https://arxiv.org/pdf/2304.02643
